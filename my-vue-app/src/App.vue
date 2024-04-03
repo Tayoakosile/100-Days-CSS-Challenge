@@ -14,10 +14,7 @@
         ></div>
         <li v-for="button in buttons" :key="button.id" class="z-[9999]">
           <button class="circle" @click="() => handleClick(button.id)">
-            <!-- <div
-          v-if="chosen_button.id == button.id"
-          class="bg-white w-full h-full rounded-full"
-        ></div> -->
+
           </button>
         </li>
       </ul>
@@ -31,14 +28,9 @@
       </ul>
     </div>
   </section>
-  
+
 </template>
 
-<!-- COLORS
-    1. #9B59B6
-    2. #3498DB
-    3. #1ABC9C
- -->
 
 <script setup>
   import _ from "lodash";
