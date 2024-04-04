@@ -76,13 +76,22 @@ const runAnimation = () => {
       ">-2"
     )
     .to(
-      ["#mini_text-1", "#mini_text-2"],
+      "#mini_text-1",
       {
         ease: "back",
-        keyframes: { x: [4, 0] },
+        keyframes: { x: [15, 0] },
         opacity: 1,
       },
       ">"
+    )
+    .to(
+      "#mini_text-2",
+      {
+        ease: "back",
+        keyframes: { x: [-15, 0] },
+        opacity: 1,
+      },
+      ">-1"
     );
 };
 onMounted(() => runAnimation());
@@ -90,7 +99,7 @@ onMounted(() => runAnimation());
 
 <template>
   <div class="animation_container">
-    <button class="bg-red-400 m-32 p-3" @click="runAnimation">Run Animation</button>
+    <!-- <button class="bg-red-400 m-32 p-3" @click="runAnimation">Run Animation</button> -->
     <section class="frame px-4 flex items-center justify-center relative">
       <div id="circle" class="absolute w-16 h-16 bg-white rounded-full"></div>
       <ul class="relative flex justify-center w-0 h-fit overflow-x-hidden" id="lines">
@@ -103,13 +112,13 @@ onMounted(() => runAnimation());
       >
         <p
           id="mini_text-1"
-          class="absolute text-4xl tracking-wider -top-[1.75rem] uppercase right-[4rem] opacity-0"
+          class="absolute text-4xl tracking-wider -top-[1.75rem] uppercase right-[4rem] opacity-0 font-normal"
         >
           Collect
         </p>
         <p
           id="mini_text-2"
-          class="absolute text-4xl tracking-wider top-[70px] uppercase right-[2rem] opacity-0"
+          class="absolute text-4xl tracking-wider top-[70px] uppercase right-[2rem] opacity-0 font-normal"
         >
           Not Things
         </p>
