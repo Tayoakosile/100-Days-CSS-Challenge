@@ -170,9 +170,3 @@ onMounted(() => runAnimation());
   background-color: var(--hello_world);
 }
 </style>
-
-<!-- .collapse_container,
-.collapse_container--child {
-  @apply after:w-4 after:h-0.5 after:bg-white after:block after:absolute  before:w-4 before:h-0.5
-   before:bg-white before:block before:absolute relative  before:right-0;
-} -->
